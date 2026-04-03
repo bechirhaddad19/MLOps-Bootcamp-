@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Flask</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+        }
+        h1 {
+            color: #0066cc;
+        }
+        section {
+            margin-top: 1rem;
+        }
+        .code {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            font-family: Consolas, monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Flask</h1>
+        <p>A simple micro web framework for Python.</p>
+    </header>
+
+    <section>
+        <h2>What is Flask?</h2>
+        <p>
+            Flask is a lightweight WSGI web application framework. It is designed to make
+            getting started quick and easy, with the ability to scale up to complex applications.
+        </p>
+    </section>
+
+    <section>
+        <h2>Quick Example</h2>
+        <div class="code">
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+        return "Hello, Flask!"
+
+@app.route("/about")
+def about():
+        return render_template("about.html")
+        </div>
+    </section>
+
+    <section>
+        <h2>Features</h2>
+        <ul>
+            <li>Routing</li>
+            <li>Template rendering (Jinja2)</li>
+            <li>Easy setup</li>
+            <li>Extensions for database, auth, etc.</li>
+        </ul>
+    </section>
+</body>
+</html>

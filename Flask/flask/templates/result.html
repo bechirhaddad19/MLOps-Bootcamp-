@@ -1,0 +1,16 @@
+<h1>
+
+    Based on the marks you have  {{ results }}
+    {% if results >= 90 %}
+        <p>Excellent! You scored an A.</p>
+    {% elif results >= 80 %}
+        <p>Great job! You scored a B.</p>
+    {% elif results >= 70 %}
+        <p>Good effort! You scored a C.</p>
+    {% elif results >= 60 %}
+        <p>Needs improvement. You scored a D.</p>
+    {% else %}
+        <p>Unfortunately, you failed. You scored an F.</p>
+    {% endif %}
+
+</h1>
